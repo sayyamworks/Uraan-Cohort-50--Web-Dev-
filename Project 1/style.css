@@ -1,0 +1,233 @@
+/* ---------- 1. RESET: remove default browser spacing ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* padding stays inside the width you set */
+}
+
+/* ---------- 2. BASE ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%; /* images never overflow their box */
+}
+
+/* keeps content centered and not too wide */
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.newClass{
+  color: black;
+}
+
+/* ---------- 3. RED BLOCKS (hero, footer, form) ---------- */
+.red-block {
+  background-color: #8f2a2e;
+  color: #fff;
+  /* cuts the bottom-right corner like the design */
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+/* ---------- 4. MAIN PAGE: HERO ---------- */
+.hero {
+  padding: 30px 0 70px;
+}
+
+.hero h1 {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 3rem;
+  margin-top: 15px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  margin-bottom: 15px;
+  max-width: 750px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #8f2a2e;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- 5. MAIN PAGE: AWARD SECTIONS ---------- */
+.award-group {
+  padding: 40px 0 10px;
+}
+
+.award-group h3 {
+  display: flex;            /* icon and text on one line */
+  align-items: center;      /* vertically centered */
+  gap: 10px;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.award-group h3 img {
+  width: 28px;
+}
+
+.clubs {
+  display: flex;
+  flex-wrap: wrap;          /* wraps to next line on small screens */
+  gap: 30px;
+}
+
+.club {
+  width: 110px;
+  text-align: center;
+}
+
+.club img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.club p {
+  color: #8f2a2e;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.club span {
+  display: block;
+  color: #111;
+}
+
+/* ---------- 6. MAIN PAGE: FOOTER ---------- */
+.footer {
+  margin-top: 40px;
+  padding: 50px 0 80px;
+}
+
+.footer h2 {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 1.8rem;
+  max-width: 500px;
+}
+
+/* ---------- 7. SUBMISSION PAGE ---------- */
+.top-bar {
+  padding: 15px 20px;
+}
+
+.form-box {
+  padding: 60px 20px 90px;
+}
+
+.form-layout {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+}
+
+.info,
+form {
+  flex: 1;                  /* both columns share the width equally */
+}
+
+.info {
+  align-self: center;       /* text column sits in the vertical middle */
+}
+
+.info h1 {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.info p {
+  margin-bottom: 15px;
+}
+
+.deadline {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 1.4rem;
+  color: black;
+}
+
+form h2 {
+  font-family: "Arial Black", Arial, sans-serif;
+  margin-top: 25px;
+}
+
+.note {
+  font-size: 0.75rem;
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.award label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+form .btn {
+  margin-top: 15px;
+  color: #333;
+}
+
+/* ---------- 8. RESPONSIVE: phones ---------- */
+@media (max-width: 700px) {
+  .form-layout {
+    flex-direction: column;  /* stack text above the form */
+  }
+
+  .hero h1,
+  .info h1 {
+    font-size: 2.2rem;
+  }
+
+  .clubs {
+    justify-content: center;
+  }
+}
